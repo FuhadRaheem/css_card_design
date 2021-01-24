@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* colors
+       light  #85DCB
+       dark   #41B3A3  
+    */
+}
+ body {
+     background: #45d4c1;
+     font-family: Arial, Helvetica, sans-serif;
+ }
+
+ div.wrapper {
+     height: 100vh;
+     width: 100vw;
+     background: linear-gradient(to bottom left, #41b3a45b, #2a554f);
+ }
+
+ div#card {
+     height: 70vh;
+     width: 70vw;
+     background: linear-gradient(#053f3080, #1f2c2a80), url(images/card-img.jpg);
+     border: none;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     overflow: hidden;
+     border-radius: 20px;
+     box-shadow: 3px 3px 15px  #142b28;
+
+ }
+
+ div#logo-title {
+     display: inline-block;
+     padding-left: 130px;
+     padding-top: 30px;
+     color: blanchedalmond;
+     font-weight: bold;
+     letter-spacing: 1.50px;
+
+     animation-name: logo-anim;
+     animation-duration: 1s;
+     animation-timing-function: ease-in-out;
+ }
+
+ @keyframes logo-anim {
+    0% {
+           opacity: 0;
+           transform: translateX(-100%);
+    }
+
+    95% {
+           transform: translateX(2%);
+    }
+
+    100% {
+           opacity: 1;
+           transform: translateX(0);
+
+    }
+}
+
+ ul {
+     list-style: none;
+     display: flex;
+     float: right;
+     padding-right: 100px;
+ }
+
+ li {
+        padding: 30px 30px;
+        letter-spacing: 1px;
+
+        animation-name: list-anim;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+ }
+
+ li a {
+     text-decoration: none;
+     color: blanchedalmond;
+     cursor: pointer;
+ }
+
+ li a:hover {
+     transition: all 500ms;
+     color: rgb(179, 153, 115);
+     text-decoration: underline  rgb(179, 153, 115);
+     line-height: 22px;
+ }
+
+ @keyframes list-anim {
+    0% {
+           opacity: 0;
+           transform: translateX(100%);
+    }
+
+    95% {
+           transform: translateX(-2%);
+    }
+
+    100% {
+           opacity: 1;
+           transform: translateX(0);
+
+    }
+}
+
+ form {
+     display: block;
+     position: absolute;
+     top: 60%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     background-color: transparent;
+     border: transparent;
+     
+ }
+
+ form input {
+     background: transparent;
+     border: transparent;
+     border-bottom: solid 1px blanchedalmond;
+     /*padding: 30px 30px 30px 0;*/
+     margin: 30px 30px 30px 10px;
+     line-height: 30px;
+     color: blanchedalmond;
+     text-align: justify;
+ }
+
+ form input::placeholder {
+     color: blanchedalmond;
+ }
+
+ p {
+     color: blanchedalmond;
+ }
+
+ p a {
+     text-decoration: none;
+     color: blanchedalmond;
+
+ }
+
+ p a:hover {
+    text-decoration: none;
+    color: rgb(179, 153, 115);
+    transition: all 1s;
+}
+
+
+ /* enable absolute positioning */
+ .inner-addon {
+    position: relative;
+ }
+  
+  /* style glyph */
+  .inner-addon .glyphicon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+  }
+  
+  /* align glyph */
+  .left-addon .glyphicon  { left:  0px;}
+  .right-addon .glyphicon { right: 0px;}
+  
+  /* add padding  */
+  .left-addon input  { padding-left:  30px; }
+  .right-addon input { padding-right: 30px; }
+
+
+  i.glyphicon-user {
+      display: inline-flex;
+      margin-top: 28px;
+      color: blanchedalmond;
+
+  }
+
+  i.glyphicon-lock {
+    display: inline-flex;
+    margin-top: 28px;
+    color: blanchedalmond;
+}
+
+ button.btn {
+     display: block;
+     background-color:  #142b2888;
+     margin: 50px auto;
+     color: blanchedalmond;
+     padding-left: 75px; 
+     padding-right: 75px;
+     letter-spacing: 1px;
+     border: solid .50px rgb(175, 161, 139) ;
+     border-radius: 50px;
+     box-shadow: 2px 2px 7px #142b28;
+
+     animation-name: btn-anim;
+     animation-duration: 1s;
+     animation-timing-function: ease-in-out;
+ }
+
+ button.btn:hover {
+    background-color:  #142b28cc;
+    color: rgb(245, 234, 218);
+    transition: all 500ms;
+    box-shadow: 2px 2px 10px #142b28;
+    transform: translateY(2px);
+ }
+
+ button.btn:active {
+    box-shadow: 2px 2px 12px #142b28;
+    transform: translateY(5px);
+ }
+
+ @keyframes btn-anim {
+     0% {
+            opacity: 0;
+            transform: translateY(100%);
+     }
+
+     95% {
+            transform: translateY(-2%);
+     }
+
+     100% {
+            opacity: 1;
+            transform: translateY(0);
+
+     }
+ }
+
+ p#designer {
+     color: blanchedalmond;
+     position: relative;
+     top: 90vh;
+     text-align: center;
+ }
